@@ -18,7 +18,7 @@
     <td><%= link_to p.name, p %></td>
     <td><%= p.permalink %></td>
     <td>
-      <%= link_to 'редактировать', edit_page_path(p.id) %> /
+      <%= link_to 'редактировать', edit_page_path(p) %> /
       <%= link_to 'удалить', p, :method => 'delete' %>
     </td>
   </tr>

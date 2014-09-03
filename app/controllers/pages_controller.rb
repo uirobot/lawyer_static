@@ -4,15 +4,16 @@ class PagesController < ApplicationController
   end
 
   def show
-    @page = Page.find params[:id]
+    #@page = Page.find params[:id]
+    @page = Page.friendly.find params[:id]
   end
 
   def edit
-    @pages = Page.find params[:id]
+    @page = Page.friendly.find params[:id]
   end
   
   def update
-    @page = Page.find params[:id]
+    @page = Page.friendly.find params[:id]
     if @page.update_attributes (page_params)
       redirect_to pages_path
     else
@@ -25,12 +26,12 @@ class PagesController < ApplicationController
   end
 
   def new
-    @pages = Page.new
+    @page = Page.new
   end
 
   def create
-    @pages = Page.new(page_params)
-    if @pages.save
+    @page = Page.new(page_params)
+    if @page.save
       redirect_to pages_path
     else
       render :action => 'new'
