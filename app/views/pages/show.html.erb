@@ -1,2 +1,6 @@
-<h1>Pages#show</h1>
-<p>Find me in app/views/pages/show.html.erb</p>
+
+<%= link_to 'список страниц', pages_path %>
+<h1><%= @page.name %></h1>
+<h4>pemalink: <%= @page.permalink %></h4>
+<%= @page.content %>
+

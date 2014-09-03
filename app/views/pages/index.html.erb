@@ -1,0 +1,26 @@
+<h1>Список страниц</h1>
+<div class="row">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <%= link_to "Создать", new_page_path, class: "btn btn-info btn-sm" %>
+    </div>
+  </div> 
+</div>
+
+<table class="table">
+  <tr>
+    <th>Название страницы</th>
+    <th>URL</th>
+    <th>&nbsp;</th>
+  </tr>
+  <% @pages.each do |p| %>
+  <tr>
+    <td><%= link_to p.name, p %></td>
+    <td><%= p.permalink %></td>
+    <td>
+      <%= link_to 'редактировать', edit_page_path(p.id) %> /
+      <%= link_to 'удалить', p, :method => 'delete' %>
+    </td>
+  </tr>
+  <% end %>  
+</table>
