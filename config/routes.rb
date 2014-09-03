@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'pages/list'
+
+  get 'pages/show'
+
+  get 'pages/edit'
+
+  get 'pages/new'
+
+  get 'pages/create'
+
+  get 'pages/delete'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
