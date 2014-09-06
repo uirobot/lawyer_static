@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  resources :pages
+  resources :pages, path: ''
 
   root to: 'pages#index'
 
