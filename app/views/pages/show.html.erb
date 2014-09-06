@@ -1,5 +1,14 @@
-<%= link_to 'список страниц', pages_path %>
-<h1><%= @page.name %></h1>
-<h4>pemalink: <%= @page.permalink %></h4>
-<%= @page.content %>
-
+<nav class="subnav">
+  <ul>
+    <li><a href="">Правовой консалтинг</a></li>
+    <li><a href="">Сопровождение сделок с недвижимостью</a></li>
+    <li class="active"><a href="">Лицензирование картографической и геодезической деятельности</a></li>
+    <li><a href="">Вступление в СРО</a></li>
+    <li><a href="">Аудит и экспертиза документов</a></li>
+  </ul>
+</nav>
+<div class="container798">
+  <div class="breadcrumbs"><a href="">Юридические услуги</a></div>
+  <div class="badge">100% гарантия результата</div>
+  <%= @page.content.html_safe() %>
+</div>
