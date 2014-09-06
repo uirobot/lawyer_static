@@ -14,6 +14,11 @@
     <%= form.label "Контент" %>
     <%= form.text_area :content, class: "form-control" %>
   </div>
+
+  <div class="form-group">
+    <%= form.label :parent_id %><br />
+    <%= form.collection_select :parent_id, Page.order(:name), :id, :name, include_blank: true %>
+  </div>
   
   <%= form.submit 'Сохранить', :class => 'btn btn-info' %>
 <% end %>
