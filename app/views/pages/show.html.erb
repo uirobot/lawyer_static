@@ -1,17 +1,8 @@
-<nav class="subnav">
-  <ul>
-    <li><a href="">Правовой консалтинг</a></li>
-    <li><a href="">Сопровождение сделок с недвижимостью</a></li>
-    <li class="active"><a href="">Лицензирование картографической и геодезической деятельности</a></li>
-    <li><a href="">Вступление в СРО</a></li>
-    <li><a href="">Аудит и экспертиза документов</a></li>
-  </ul>
-</nav>
+
+<%= render partial: 'pages/page_partials/left_menu', locals: {neighors: @page.siblings, current_page: @page } %>
+
 <div class="container798">
-  
   <%= render partial: 'pages/page_partials/bread', locals: {p_id: @page } %>
-  
-  
   <div class="badge">100% гарантия результата</div>
-      <%= @page.content.html_safe() %>
+  <%= @page.content.html_safe() %>
 </div>

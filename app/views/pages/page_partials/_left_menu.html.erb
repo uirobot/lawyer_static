@@ -1,0 +1,13 @@
+<nav class="subnav">
+  <ul>
+
+    <% neighors.each do |item| %>
+      <% if item.id == current_page.id %>
+        <li class="active"><%= link_to item.name, item  %></li>
+      <% else %>
+        <li><%= link_to item.name, item  %></li>
+      <% end %>
+    <% end %>
+  </ul>
+</nav>
+

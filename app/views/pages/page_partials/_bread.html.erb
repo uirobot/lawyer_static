@@ -1,6 +1,8 @@
 <div class="breadcrumbs">
   <% p_id.ancestors.each do |page_item| %>
-      <a href="#"><%= page_item.name %></a>
+      
+      <%= link_to page_item.name, page_item  %>
+
   <% end %>
   
 </div>
