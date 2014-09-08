@@ -51,8 +51,12 @@
                 </address>
                 <a href="/" class="logo"></a>
                 <%= render partial: 'layouts/main_menu' %>
+                
             </div>
         </header>
+
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
 
         <div class="contentpage">
           <%= yield %>

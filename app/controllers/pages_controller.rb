@@ -5,7 +5,7 @@ class PagesController < ApplicationController
 
   def show
     #@page = Page.find params[:id]
-    @page = Page.friendly.find params[:id]
+    #@page = Page.friendly.find params[:id]
   end
 
   def edit
@@ -23,6 +23,7 @@ class PagesController < ApplicationController
 
   def index
     @pages = Page.all
+    render layout: "index"
   end
 
   def new
@@ -51,5 +52,11 @@ class PagesController < ApplicationController
 
   def page_params
     params.require(:page).permit(:name, :permalink, :content, :parent_id)
+  end
+
+
+  def admin_index
+
+    
   end
 end

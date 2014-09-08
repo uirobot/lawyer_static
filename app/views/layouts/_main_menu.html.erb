@@ -1,17 +1,17 @@
 <nav class="mainav">
     <ul>
         <li class="parent">
-            <%= link_to Page.find_by_id(4).name, Page.find_by_id(4).children.first  %>
+            <%= link_to Page.find_by_id(1).name, Page.find_by_id(1).children.first  %>
             <ul class="submenu">
-                <% Page.find_by_id(4).children.each do |page_item| %>
+                <% Page.find_by_id(1).children.each do |page_item| %>
                     <li><%= link_to page_item.name, page_item  %></li>
                 <% end %>
             </ul>
         </li>
         <li class="parent">
-            <%= link_to Page.find_by_id(5).name, Page.find_by_id(5).children.first  %>
+            <%= link_to Page.find_by_id(2).name, Page.find_by_id(2).children.first  %>
             <ul class="submenu">
-                <% Page.find_by_id(5).children.each do |page_item| %>
+                <% Page.find_by_id(2).children.each do |page_item| %>
                     <li><%= link_to page_item.name, page_item  %></li>
                 <% end %>
             </ul>            
