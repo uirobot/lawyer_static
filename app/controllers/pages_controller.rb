@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  before_action :authenticate_user!, :except => [:show, :index]
   def list
 
   end
@@ -19,6 +20,10 @@ class PagesController < ApplicationController
     else
       render :action => :edit
     end
+  end
+
+  def index_page
+    @pages = Page.all
   end
 
   def index

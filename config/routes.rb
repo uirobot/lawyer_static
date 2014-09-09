@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :pages, path: 'admin/pages', only: [:create, :edit, :destroy, :update, :new]
   resources :images, path: 'admin/images', only: [:create, :edit, :destroy, :update, :new]
-  # resources :pages, path: '', only: [:show]
+  resources :pages, path: '', only: [:show]
   get ':parent_id/:id' => 'pages#show'
 
   # get 'admin/index' => 'pages#admin_index'
