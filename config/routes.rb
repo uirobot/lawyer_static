@@ -1,11 +1,20 @@
 Rails.application.routes.draw do
 
-  devise_for :users
-  resources :pages, path: ''
+  resources :images
+
+  # namespace :concerns do
+  # get 'admin/index'
+  # end
 
   root to: 'pages#index'
+  resources :admin, only: [:index]
+  devise_for :users
+  resources :pages, path: 'admin/pages', only: [:create, :edit, :destroy, :update, :new]
+  resources :images, path: 'admin/images', only: [:create, :edit, :destroy, :update, :new]
+  # resources :pages, path: '', only: [:show]
+  get ':parent_id/:id' => 'pages#show'
 
-  get 'admin/index' => 'page#admin_index'
+  # get 'admin/index' => 'pages#admin_index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

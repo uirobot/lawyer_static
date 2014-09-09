@@ -4,12 +4,12 @@ class PagesController < ApplicationController
   end
 
   def show
-    #@page = Page.find params[:id]
-    #@page = Page.friendly.find params[:id]
+    # @page = Page.find params[:id]
+    @page = Page.friendly.find(params[:id])
   end
 
   def edit
-    @page = Page.friendly.find params[:id]
+    @page = Page.friendly.find(params[:id])
   end
   
   def update
@@ -23,7 +23,7 @@ class PagesController < ApplicationController
 
   def index
     @pages = Page.all
-    render layout: "index"
+    render layout: 'index'
   end
 
   def new
@@ -55,8 +55,4 @@ class PagesController < ApplicationController
   end
 
 
-  def admin_index
-
-    
-  end
 end
