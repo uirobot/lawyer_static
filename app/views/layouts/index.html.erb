@@ -155,7 +155,8 @@
             <div class="news">
                 
                 <h1>Новости</h1>
-                <a href="#" class="archlink">Архив новостей</a>
+
+               <%= link_to 'Архив новостей', news_items_path, :class => 'archlink' %>
 
                 <% @news_items.each do |news_item| %>
                     <%= link_to news_item do %>

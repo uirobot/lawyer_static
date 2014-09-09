@@ -1,0 +1,13 @@
+<div class="container798">
+
+  <h1>Архив новостей</h1>
+
+  <% @news_items.each do |news_item| %>
+      <%= link_to news_item do %>
+          <div class="date"><%= news_item.created_at.to_formatted_s(:short) %></div>
+          <div class="intro"><%= news_item.title %></div>
+      <% end %>
+  <% end %>
+
+
+</div>
