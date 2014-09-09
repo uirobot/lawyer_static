@@ -4,15 +4,15 @@
             <%= link_to Page.find_by_id(1).name, Page.find_by_id(1).permalink  %>
             <ul class="submenu">
                 <% Page.find_by_id(1).children.each do |page_item| %>
-                    <li><%= link_to page_item.name, page_item  %></li>
+                    <li><%= link_to page_item.name, page_item.permalink  %></li>
                 <% end %>
             </ul>
         </li>
         <li class="parent">
-            <%= link_to Page.find_by_id(2).name, Page.find_by_id(2).children.first  %>
+            <%= link_to Page.find_by_id(2).name, Page.find_by_id(2).permalink  %>
             <ul class="submenu">
                 <% Page.find_by_id(2).children.each do |page_item| %>
-                    <li><%= link_to page_item.name, page_item  %></li>
+                    <li><%= link_to page_item.name, page_item.permalink  %></li>
                 <% end %>
             </ul>            
         </li>

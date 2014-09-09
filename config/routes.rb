@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # namespace :concerns do
   # get 'admin/index'
   # end
+  resources :news_items, only: [:show, :index]
 
   root to: 'pages#index'
   resources :admin, only: [:index]
@@ -14,9 +15,14 @@ Rails.application.routes.draw do
       get 'index_page', as: 'list'
     end
   end
-  resources :images, path: 'admin/images', only: [:create, :edit, :destroy, :update, :new]
   resources :pages, path: '', only: [:show]
   get ':parent_id/:id' => 'pages#show'
+  resources :news_items, path: 'admin/news_items', only: [:create, :edit, :destroy, :update, :new] do
+    collection do
+      get 'index_page', as: 'list'
+    end
+  end
+  resources :images, path: 'admin/images', only: [:create, :edit, :destroy, :update, :new]
 
   # get 'admin/index' => 'pages#admin_index'
 

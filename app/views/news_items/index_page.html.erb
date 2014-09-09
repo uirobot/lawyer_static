@@ -8,7 +8,7 @@
 </nav>
 <div class="container798">
 
-  <%= link_to 'Добавить сраницу', new_page_path, :class => 'btn addnewpage' %>
+  <%= link_to 'Добавить новость', new_news_item_path, :class => 'btn addnewpage' %>
 
   <h1>Страницы сайта</h1>
 
@@ -16,17 +16,16 @@
     <thead>
     <tr>
       <th width="349">Заголовок</th>
-      <th>раздел</th>
+
       <th style="text-align:center">удалить</th>
     </tr>
     </thead>
-      <% @pages.each do |page| %>
+    <% @news_items.each do |news_item| %>
         <tr>
-            <td><%= link_to page.name, edit_page_path(page.id) %></td>
-            <td><%= page.parent ? page.parent.name : '-' %></td>
-            <td align="center"><%= link_to 'X', page_path(page.id), :method => :delete %></td>
+          <td><%= link_to news_item.title, edit_news_item_path(news_item.id) %></td>
+          <td align="center"><%= link_to 'X', news_item_path(news_item.id), :method => :delete %></td>
         </tr>
-  <% end %>
+    <% end %>
 
   </table>
 </div>

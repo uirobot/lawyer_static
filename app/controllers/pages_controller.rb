@@ -28,6 +28,7 @@ class PagesController < ApplicationController
 
   def index
     @pages = Page.all
+    @news_items = NewsItem.all
     render layout: 'index'
   end
 

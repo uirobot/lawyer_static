@@ -157,26 +157,12 @@
                 <h1>Новости</h1>
                 <a href="#" class="archlink">Архив новостей</a>
 
-                <a href="" class="item">
-                    <div class="date">21 марта</div>
-                    <div class="intro">Напоминаем, что для получения лицензии на алкоголь требуется регистрация действующего договора аренды помещения</div>
-                </a>
-                <a href="" class="item">
-                    <div class="date">21 марта</div>
-                    <div class="intro">Напоминаем, что для получения лицензии на алкоголь требуется регистрация действующего договора аренды помещения</div>
-                </a>
-                <a href="" class="item">
-                    <div class="date">21 марта</div>
-                    <div class="intro">Напоминаем, что для получения лицензии на алкоголь требуется регистрация действующего договора аренды помещения</div>
-                </a>
-                <a href="" class="item">
-                    <div class="date">21 марта</div>
-                    <div class="intro">Напоминаем, что для получения лицензии на алкоголь требуется регистрация действующего договора аренды помещения</div>
-                </a>
-                <a href="" class="item">
-                    <div class="date">21 марта</div>
-                    <div class="intro">Напоминаем, что для получения лицензии на алкоголь требуется регистрация действующего договора аренды помещения</div>
-                </a>
+                <% @news_items.each do |news_item| %>
+                    <%= link_to news_item do %>
+                        <div class="date"><%= news_item.created_at.to_formatted_s(:short) %></div>
+                        <div class="intro"><%= news_item.title %></div>
+                    <% end %>
+                <% end %>
             </div>
 
         </div>

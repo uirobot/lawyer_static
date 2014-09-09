@@ -1,0 +1,13 @@
+<%= form_for @news_item, html: {role: 'form'} do |form| %>
+
+
+    <%= form.text_field :title, class: 'form-control', :placeholder => 'Заголовок новости' %>
+
+
+    <%= form.text_area :body, class: 'form-control', :placeholder => 'Содержимое новости' %>
+
+
+
+    <%= form.submit 'Опубликовать', :class => 'btn' %>
+<% end %>
+

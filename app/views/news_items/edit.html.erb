@@ -1,4 +1,4 @@
-<h1>Редактирование страницы</h1>
+<h1>Редактирование новости</h1>
 
 <nav class="subnav">
   <ul>
@@ -9,11 +9,12 @@
 
 </nav>
 <div class="container798">
+  <%= link_to 'Удалить страницу', news_item_path(@news_item.id), :method => :delete %>
 
   <div class="breadcrumbs"><%= link_to 'Статичные страницы', list_pages_path %></div>
 
-  <h1>Новая страница</h1>
+  <h1><%= @news_item.title %></h1>
 
-  <%= render :partial => 'pages/page_partials/basic_form' %>
+  <%= render :partial => 'form' %>
 
 </div>
