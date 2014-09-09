@@ -1,2 +1,20 @@
-<h1>Создание страницы</h1>
-<%= render :partial => 'pages/page_partials/basic_form' %>
+
+<h1>Редактирование страницы</h1>
+
+<nav class="subnav">
+  <ul>
+    <li class="active"><a href="">Список новостей</a>
+    <li><%= link_to 'Статичные страницы', list_pages_path %>
+    <li><a href="">Отзывы посетителей</a>
+  </ul>
+
+</nav>
+<div class="container798">
+
+  <div class="breadcrumbs"><%= link_to 'Статичные страницы', list_pages_path %></div>
+
+  <h1>Новая страница</h1>
+
+  <%= render :partial => 'pages/page_partials/basic_form' %>
+
+</div>
