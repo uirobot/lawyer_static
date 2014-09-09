@@ -1,0 +1,32 @@
+<nav class="subnav">
+  <ul>
+    <li><a href="">Список новостей</a>
+    <li><%= link_to 'Статичные страницы', list_pages_path %>
+    <li><a href="">Отзывы посетителей</a>
+  </ul>
+
+</nav>
+<div class="container798">
+
+  <%= link_to 'Добавить сраницу', new_page_path, :class => 'btn addnewpage' %>
+
+  <h1>Страницы сайта</h1>
+
+  <table>
+    <thead>
+    <tr>
+      <th width="349">Заголовок</th>
+      <th>раздел</th>
+      <th style="text-align:center">удалить</th>
+    </tr>
+    </thead>
+      <% @pages.each do |page| %>
+        <tr>
+            <td><%= link_to page.name, edit_page_path(page.id) %></td>
+            <td><%= page.parent ? page.parent.name : '-' %></td>
+            <td align="center"><%= link_to 'X', page_path(page.id), :method => :delete %></td>
+        </tr>
+  <% end %>
+
+  </table>
+</div>

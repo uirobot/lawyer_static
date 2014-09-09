@@ -58,7 +58,7 @@
        <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
 
-        <div class="contentpage">
+        <div class="contentpage <%= 'admin' if request.original_url.include?('admin') %>">
           <%= yield %>
         </div>
 

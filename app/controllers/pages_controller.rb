@@ -16,7 +16,7 @@ class PagesController < ApplicationController
   def update
     @page = Page.friendly.find params[:id]
     if @page.update_attributes (page_params)
-      redirect_to new_page_path
+      redirect_to list_pages_path
     else
       render :action => :edit
     end
@@ -38,7 +38,7 @@ class PagesController < ApplicationController
   def create
     @page = Page.new(page_params)
     if @page.save
-      redirect_to new_page_path
+      redirect_to list_pages_path
     else
       render :action => 'new'
     end    
@@ -50,7 +50,7 @@ class PagesController < ApplicationController
   def destroy
     @page = Page.find params[:id]
     @page.destroy
-    redirect_to pages_path
+    redirect_to list_pages_path
   end
 
   private

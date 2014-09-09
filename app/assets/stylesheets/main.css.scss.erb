@@ -129,7 +129,7 @@ h5 {
     font-weight: normal;
 }
 
-.container {margin: 0 auto;}
+.container {margin: 0 auto; position: relative}
 .container940 {
     width: 940px;
     margin: 0 auto;
@@ -791,7 +791,57 @@ input.btn:active {background: #6289b6;border: 0; border-top: 3px solid #53759d;c
     h3 {
         page-break-after: avoid;
     }
-    p.notice {
+    p.notice .alert {
         margin: 0;
     }
 }
+/* Admin */
+
+header h1.admintitle {
+    position: absolute;
+    left: 379px;
+    margin: 0;
+    top: 20px;
+    font-weight: normal;
+    opacity: 0.5;
+}
+
+.admin form {margin-bottom: 20px;}
+.admin form table a {text-decoration: none;}
+.admin form textarea, .admin input[type="text"] {width: 716px;}
+.admin form select{width: 736px;}
+.admin form textarea {height: 500px;}
+.admin form .note {display: block; opacity: 0.5; margin: -6px 0 10px;  font-size: 12px;}
+
+.admin .btn.addnewpage {
+    position: absolute;
+    right: 20px;
+    top: 26px;
+    padding: 6px 10px 4px;
+    color: #fff;
+    font-size: 18px;
+    background: #7ca1cc;
+    border: 0;
+    border-bottom: 3px solid #5f82ac;
+    border-radius: 4px;
+    text-align: center;
+}
+.admin .btn.addnewpage:hover {background: #8cb0da;color: #fff;}
+.admin .btn.addnewpage:active {background: #6289b6;border: 0; border-top: 3px solid #53759d;color: #fff;}
+
+.admin .btn.delpage {
+    position: absolute;
+    right: 20px;
+    top: 26px;
+    padding: 6px 10px 4px;
+    color: #fff;
+    font-size: 18px;
+    background: #CC7C7C;
+    border: 0;
+    border-bottom: 3px solid #AC5F5F;
+    border-radius: 4px;
+    text-align: center;
+}
+.admin .btn.delpage:hover {background: #DA8C8C;color: #fff;}
+.admin .btn.delpage:active {background: #B66262;border: 0; border-top: 3px solid #9D5353;color: #fff;}
+/* Admin_end */

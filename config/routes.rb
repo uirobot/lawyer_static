@@ -9,7 +9,11 @@ Rails.application.routes.draw do
   root to: 'pages#index'
   resources :admin, only: [:index]
   devise_for :users
-  resources :pages, path: 'admin/pages', only: [:create, :edit, :destroy, :update, :new]
+  resources :pages, path: 'admin/pages', only: [:create, :edit, :destroy, :update, :new] do
+    collection do
+      get 'index_page', as: 'list'
+    end
+  end
   resources :images, path: 'admin/images', only: [:create, :edit, :destroy, :update, :new]
   resources :pages, path: '', only: [:show]
   get ':parent_id/:id' => 'pages#show'
