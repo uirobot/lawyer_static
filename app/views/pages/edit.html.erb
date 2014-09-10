@@ -9,11 +9,11 @@
 
 </nav>
 <div class="container798">
-  <%= link_to 'Удалить новость', new_news_item_path(@news_item.id), :method => :delete %>
+  <%= link_to 'Удалить новость', page_path(@page.id), :method => :delete %>
 
-  <div class="breadcrumbs"><%= link_to 'Список новостей', list_news_items_path %></div>
+  <div class="breadcrumbs"><%= link_to 'Статичные страницы', list_pages_path %></div>
 
-  <h1><%= @news_item.name %></h1>
+  <h1><%= @page.name %></h1>
 
   <%= render :partial => 'pages/page_partials/basic_form' %>
 
