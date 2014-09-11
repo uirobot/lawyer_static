@@ -10,11 +10,9 @@
       </ul>
     </div>
   <% end %>
-    <div class="form-group">
+     <p>
       <%= f.label 'Картинка' %>
       <%= f.file_field :pic, class: 'form-control' %>
-    </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+     </p>
+    <%= f.submit 'Опубликовать', :class => 'btn' %>
 <% end %>

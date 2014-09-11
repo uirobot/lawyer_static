@@ -1,19 +1,11 @@
-<h1>Редактирование новости</h1>
+<h1>Редактирование изображения</h1>
 
-<nav class="subnav">
-  <ul>
-    <li><%= link_to 'Список новостей', list_news_items_path %>
-    <li><%= link_to 'Статичные страницы', list_pages_path %>
-    <li><a href="">Отзывы посетителей</a>
-  </ul>
-
-</nav>
+<%= render partial: 'admin/left_menu' %>
 <div class="container798">
-  <%= link_to 'Удалить страницу', news_item_path(@news_item.id), :method => :delete %>
 
-  <div class="breadcrumbs"><%= link_to 'Статичные страницы', list_pages_path %></div>
+  <div class="breadcrumbs"><%= link_to 'Изображения', images_path %></div>
 
-  <h1><%= @news_item.title %></h1>
+  <h1>Редактировать изображение</h1>
 
   <%= render :partial => 'form' %>
 

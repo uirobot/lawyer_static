@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
 
-  resources :images
 
   # namespace :concerns do
   # get 'admin/index'
   # end
   resources :news_items, only: [:show, :index]
-
+  resources :images, path: 'admin/images', only: [:create, :edit, :destroy, :update, :new, :index]
   root to: 'pages#index'
   resources :admin, only: [:index]
   devise_for :users
@@ -22,7 +21,6 @@ Rails.application.routes.draw do
       get 'index_page', as: 'list'
     end
   end
-  resources :images, path: 'admin/images', only: [:create, :edit, :destroy, :update, :new]
 
   # get 'admin/index' => 'pages#admin_index'
 

@@ -1,13 +1,6 @@
 <h1>Редактирование страницы</h1>
 
-<nav class="subnav">
-  <ul>
-    <li><%= link_to 'Список новостей', list_news_items_path %>
-    <li><%= link_to 'Статичные страницы', list_pages_path %>
-    <li><a href="">Отзывы посетителей</a>
-  </ul>
-
-</nav>
+<%= render partial: 'admin/left_menu' %>
 <div class="container798">
 
   <div class="breadcrumbs"><%= link_to 'Статичные страницы', list_pages_path %></div>
