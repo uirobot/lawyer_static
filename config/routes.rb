@@ -4,23 +4,23 @@ Rails.application.routes.draw do
   # namespace :concerns do
   # get 'admin/index'
   # end
+  devise_for :users
   resources :news_items, only: [:show, :index]
   resources :images, path: 'admin/images', only: [:create, :edit, :destroy, :update, :new, :index]
   root to: 'pages#index'
   resources :admin, only: [:index]
-  devise_for :users
   resources :pages, path: 'admin/pages', only: [:create, :edit, :destroy, :update, :new] do
     collection do
       get 'index_page', as: 'list'
     end
   end
   resources :pages, path: '', only: [:show]
-  get ':parent_id/:id' => 'pages#show'
   resources :news_items, path: 'admin/news_items', only: [:create, :edit, :destroy, :update, :new] do
     collection do
       get 'index_page', as: 'list'
     end
   end
+  get ':parent_id/:id' => 'pages#show'
 
   # get 'admin/index' => 'pages#admin_index'
 

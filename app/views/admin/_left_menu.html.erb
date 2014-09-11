@@ -4,5 +4,7 @@
     <li><%= link_to 'Статичные страницы', list_pages_path %>
     <li><%= link_to 'Изображения', images_path %>
     <li><a href="">Отзывы посетителей</a>
+    <hr>
+    <li><%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
   </ul>
 </nav>
