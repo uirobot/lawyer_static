@@ -6,7 +6,7 @@
     <%= form.text_field :permalink, class: 'form-control', :placeholder => 'Псевдоним' %>
     <span class="note">Это поле должно содержать только латинские буквы, цифры или сиволы "-" и "_"</span>
 
-    <%= form.collection_select :parent_id, Page.order(:name), :id, :name, include_blank: false %>
+    <%= form.collection_select :parent_id, Page.order(:name), :id, :name, include_blank: true %>
 
     <%= form.text_area :content, class: 'form-control', :placeholder => 'Содержимое страницы' %>
 
