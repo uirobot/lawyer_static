@@ -157,12 +157,34 @@ header .logo {
 }
 header .mainav {position: relative;top: 56px;left: 49px;max-width: 900px}
 header .mainav ul {list-style-type: none;margin: 0;}
-header .mainav ul li {display: inline-block;margin-right: 50px;}
+header .mainav ul li {display: inline-block;margin-right: 50px;padding: 0 0 18px;}
 header .mainav ul li.parent {margin-right: 26px;}
 header .mainav ul li:last-child {margin-right: 0;}
 header .mainav ul li a {text-decoration: none;display: block;font-size: 19px;color: #16203e;}
 header .mainav ul li.parent a {padding-right: 25px;background: url(<%= asset_path('dda.png') %>) right 8px no-repeat;}
-header .mainav ul li .submenu {display: none;border-top: 2px solid #f1f1f1;}
+header .mainav ul li.parent .submenu {
+    display: none;
+    position: absolute;
+    border-top: 2px solid #f1f1f1;
+    width: 660px;
+    padding: 26px 0 10px 30px;
+    background: #fff;
+    z-index: 99999;
+    top: 42px;
+}
+header .mainav ul li.parent .submenu:before {
+    position: absolute;
+    width: 27px;
+    height: 13px;
+    top: -13px;
+    left: 83px;
+    content: '';
+    background: url(<%= asset_path('sma.png') %>) 0 0 no-repeat;
+}
+header .mainav ul li.parent:hover .submenu {display: block;}
+header .mainav ul li.parent .submenu li {margin: 0 30px 20px 0; width: 296px;}
+header .mainav ul li.parent .submenu li a {padding:0; background: none;}
+header .mainav ul li.parent .submenu li a:hover {color: #7da2cd;}
 
 header address {
     float: right;
@@ -229,7 +251,7 @@ header address .address {opacity: 0.9;font-size: 15px;}
 
 .services .list .item:nth-child(2n) {margin-left: 2px;}
 
-.partners {width: 340px;padding: 56px 0 60px 600px;}
+.partners {width: 340px;padding: 56px 0 60px 600px;min-height: 435px;}
 .partners h2 {
     margin: 0 0 19px;
     font-size: 23px;
@@ -240,7 +262,7 @@ header address .address {opacity: 0.9;font-size: 15px;}
 .logos {margin-left: 8px; overflow: hidden;margin: 0 0 13px 8px;}
 .logos .logo {display: inline-block;margin: 0 41px 35px 0;}
 
-.news {width: 460px;position: relative;}
+.news {width: 460px;position: relative;min-height: 470px;}
 .news h1 {font-size: 36px;margin: 34px 0 2px;}
 .news .archlink {
     position: absolute;
@@ -312,7 +334,7 @@ nav.subnav ul li a:hover {color: #6B92BF;}
 .contentpage .container798 {
     background: #fff;
     margin-left: 322px;
-    padding:10px 30px 4px 30px;
+    padding: 10px 30px 30px 30px;
     width: 738px;
 }
 .contentpage .badge {
@@ -845,3 +867,4 @@ header h1.admintitle {
 .admin .btn.delpage:hover {background: #DA8C8C;color: #fff;}
 .admin .btn.delpage:active {background: #B66262;border: 0; border-top: 3px solid #9D5353;color: #fff;}
 /* Admin_end */
+
