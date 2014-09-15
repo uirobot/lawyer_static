@@ -153,7 +153,7 @@
                 
                 <h1>Новости</h1>
 
-               <%= link_to 'Архив новостей', news_items_path, :class => 'archlink' %>
+               <%= link_to 'Архив новостей', news_items_list_path, :class => 'archlink' %>
 
                 <% @news_items.each do |news_item| %>
                     <%= link_to news_item_show_path(news_item.id), :class => 'item' do %>

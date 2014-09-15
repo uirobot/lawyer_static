@@ -47,6 +47,7 @@ gem 'mysql2'#, group: :development
 gem 'sqlite3', group: :development
 gem 'friendly_id'
 gem 'ancestry'
+gem 'will_paginate'
 
 gem 'devise'
 
