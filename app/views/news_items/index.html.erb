@@ -2,16 +2,14 @@
 
   <h1>Архив новостей</h1>
 
-  <div class="newspage">
-    <div class="container798">
+
       <% @news_items.each do |news_item| %>
           <%= link_to news_item_show_path(news_item.id), :class => 'item' do %>
               <div class="date"><%= news_item.created_at.to_formatted_s(:short) %></div>
               <div class="intro"><%= news_item.title %></div>
           <% end %>
       <% end %>
-    </div>
-  </div>
+
   <div class="container798">
     <%= will_paginate @news_items, :class => 'pages', :previous_label => 'Назад', :next_label => 'Вперёд' %>
   </div>

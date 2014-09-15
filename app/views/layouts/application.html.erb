@@ -58,7 +58,7 @@
        <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
 
-        <div class="contentpage <%= 'admin' if request.original_url.include?('admin') %> <%= ' no_sidebar' if @no_sidebar %>">
+        <div class="<%= @news_container || 'contentpage'%> <%= 'admin' if request.original_url.include?('admin') %> <%= ' no_sidebar' if @no_sidebar %>">
           <%= yield %>
         </div>
 

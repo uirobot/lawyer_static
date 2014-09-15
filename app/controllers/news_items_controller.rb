@@ -26,6 +26,7 @@ class NewsItemsController < ApplicationController
 
   def index
     @no_sidebar = true
+    @news_container = 'newspage'
     @news_items = NewsItem.all.page(params[:page]).per_page(10)
   end
 
