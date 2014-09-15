@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140910130859) do
+ActiveRecord::Schema.define(version: 20140915093228) do
 
   create_table "images", force: true do |t|
     t.string   "pic_file_name"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20140910130859) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "ancestry"
+    t.integer  "place",      default: 0
   end
 
   add_index "pages", ["ancestry"], name: "index_pages_on_ancestry"

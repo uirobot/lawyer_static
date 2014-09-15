@@ -5,5 +5,7 @@ class Page < ActiveRecord::Base
   friendly_id :permalink
 
   has_ancestry
+
+  default_scope { order('place DESC') }
   
 end

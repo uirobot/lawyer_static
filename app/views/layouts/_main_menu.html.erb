@@ -1,33 +1,33 @@
 <nav class="mainav">
     <ul>
         <li class="parent">
-            <%= link_to Page.find_by_id(1).name, root_path  %>
+            <%= link_to @licence.name, root_path  %>
             <ul class="submenu">
-                <% Page.find_by_id(1).children.each do |page_item| %>
+                <% @licence.children.each do |page_item| %>
                     <li><%= link_to page_item.name, page_item.permalink  %></li>
                 <% end %>
             </ul>
         </li>
         <li class="parent">
-            <%= link_to Page.find_by_id(2).name, root_path  %>
+            <%= link_to @layer_service.name, root_path  %>
             <ul class="submenu">
-                <% Page.find_by_id(2).children.each do |page_item| %>
+                <% @layer_service.children.each do |page_item| %>
                     <li><%= link_to page_item.name, page_item.permalink  %></li>
                 <% end %>
             </ul>            
         </li>
         <li class="parent">
-            <%= link_to Page.find_by_id(30).name, root_path  %>
+            <%= link_to @other_service.name, root_path  %>
             <ul class="submenu">
-                <% Page.find_by_id(30).children.each do |page_item| %>
+                <% @other_service.children.each do |page_item| %>
                     <li><%= link_to page_item.name, page_item.permalink  %></li>
                 <% end %>
             </ul>            
         </li>
         <li class="parent">
-            <%= link_to Page.find_by_id(23).name, root_path  %>
+            <%= link_to @about.name, root_path  %>
             <ul class="submenu">
-                <% Page.find_by_id(23).children.each do |page_item| %>
+                <% @about.children.each do |page_item| %>
                     <li><%= link_to page_item.name, page_item.permalink  %></li>
                 <% end %>
             </ul>            
