@@ -58,7 +58,7 @@
        <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
 
-        <div class="contentpage <%= 'admin' if request.original_url.include?('admin') %> <%= ' no_sidebar' if @no_sidebar %>">
+        <div class="<%= @news_container || 'contentpage'%> <%= 'admin' if request.original_url.include?('admin') %> <%= ' no_sidebar' if @no_sidebar %>">
           <%= yield %>
         </div>
 
@@ -71,22 +71,16 @@
                     <div class="phone"> <div class="ico"></div> +7 (918) 900-07-60</div>
                     <div class="worktime">понедельник-пятница 9:00 - 18:30</div>
                 </address>
-                <a href="" class="qstn_lnk">
+                <a href="" class="qstn_lnk" id="go">
                     Есть вопрос?
                     <span>мы онлайн</span>
                 </a>
                 <p class="cprt">© 2010—2014, Юридическая компания «Личный Юрист»</p>
-                <a href="#" data-reveal-id="myModal">Click Me For A Modal</a>
             </div>
         </footer>
 
-<div id="myModal" class="reveal-modal">
-     <h1>Modal Title</h1>
-     <p>Any content could go in here.</p>
-     <a class="close-reveal-modal">&#215;</a>
-</div>
-
-        <div class="modal" style="display:none;">
+        <div id="modal_form">
+            <span id="modal_close">X</span>
             <div class="fbform">
                 <h2>Задайте вопрос юристу</h2>
                 <h5>Бесплатно и конфиденциально</h5>
@@ -102,12 +96,9 @@
                 </form>
                 
             </div>
-        </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        </div>
+        <div id="overlay"></div>
 
   </body>
 </html>

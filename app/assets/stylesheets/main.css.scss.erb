@@ -445,12 +445,11 @@ nav.subnav ul li a:hover {color: #6B92BF;}
 }
 .newspage .item:hover .intro {color: #6b92bf;}
 
-.pagination {position: relative;margin-top: 30px;}
-.pagination .pages {text-align: center;font-size: 19px;padding-top: 10px;}
-.pagination a, .pagination span {color: #6d6d6d; margin: 0 9px; text-decoration: none;}
+.pagination {position: relative;margin: 30px auto 0;text-align: center;width: 798px;}
+.pagination a, .pagination em {display:inline-block;color: #6d6d6d; margin: 0 9px; text-decoration: none;margin-top: 10px;font-style: normal;font-size: 19px;}
 .pagination a:hover {color: #6b92bf;}
 .pagination a.active {font-weight: bold;}
-.pagination .btn.next {
+.pagination .next_page {
     position: absolute;
     right: 22px;
     margin: 0;
@@ -462,7 +461,7 @@ nav.subnav ul li a:hover {color: #6B92BF;}
     text-decoration: none;
     background: #f8f8f8;
 }
-.pagination .btn.next:before {
+.pagination .next_page:before {
     position: absolute;
     right: -19px;
     top: 0;
@@ -472,10 +471,11 @@ nav.subnav ul li a:hover {color: #6B92BF;}
     height: 46px;
     background: url(<%= asset_path('pnb.png') %>) 0 0 no-repeat;
 }
-.pagination .btn.next:hover {background: #eaeaea;color: #6c6c6c;}
-.pagination .btn.next:hover:before {background: url(<%= asset_path('pnbh.png') %>) 0 0 no-repeat;}
+.pagination .next_page.disabled {cursor: default;}
+.pagination .next_page:hover {background: #eaeaea;color: #6c6c6c;}
+.pagination .next_page:hover:before {background: url(<%= asset_path('pnbh.png') %>) 0 0 no-repeat;}
 
-.pagination .btn.prev {
+.pagination .previous_page {
     position: absolute;
     left: 22px;
     margin: 0;
@@ -487,7 +487,7 @@ nav.subnav ul li a:hover {color: #6B92BF;}
     text-decoration: none;
     background: #f8f8f8;
 }
-.pagination .btn.prev:before {
+.pagination .previous_page:before {
     position: absolute;
     left: -19px;
     top: 0;
@@ -497,8 +497,9 @@ nav.subnav ul li a:hover {color: #6B92BF;}
     height: 46px;
     background: url(<%= asset_path('ppb.png') %>) 0 0 no-repeat;
 }
-.pagination .btn.prev:hover {background: #eaeaea;color: #6c6c6c;}
-.pagination .btn.prev:hover:before {background: url(<%= asset_path('ppbh.png') %>) 0 0 no-repeat;}
+.pagination .previous_page.disabled {cursor: default;}
+.pagination .previous_page:hover {background: #eaeaea;color: #6c6c6c;}
+.pagination .previous_page:hover:before {background: url(<%= asset_path('ppbh.png') %>) 0 0 no-repeat;}
 
 
 /* Forms */
