@@ -155,7 +155,7 @@ header .logo {
     margin: 0 14px 14px 14px;
     background: url(<%= asset_path('logo.png') %>) 0 0 no-repeat;
 }
-header .mainav {position: relative;top: 56px;left: 49px;max-width: 900px}
+header .mainav {position: relative;top: 56px;left: 49px;max-width: 970px;}
 header .mainav ul {list-style-type: none;margin: 0;}
 header .mainav ul li {display: inline-block;margin-right: 50px;padding: 0 0 18px;}
 header .mainav ul li.parent {margin-right: 26px;}
@@ -225,6 +225,8 @@ header address .address {opacity: 0.9;font-size: 15px;}
     height: 90px;
     margin-bottom: 2px;
     font-size: 17px;
+    display: block;
+    color: #4a4a4a;
 }
 .services .list .item .button {
     display: table;
@@ -236,6 +238,7 @@ header address .address {opacity: 0.9;font-size: 15px;}
     padding: 10px 20px;
     line-height: 19px;
     z-index: 1;
+    text-decoration: none;
 }
 .services .list .item .button span {display: table-cell;vertical-align: middle;}
 .services .list .item .button:hover {
@@ -246,7 +249,7 @@ header address .address {opacity: 0.9;font-size: 15px;}
     background: #85a9d5;
     z-index: 2;
     color: #fff;
-    font-size: 21px;
+    font-size: 20px;
 }
 
 .services .list .item:nth-child(2n) {margin-left: 2px;}
@@ -260,7 +263,7 @@ header address .address {opacity: 0.9;font-size: 15px;}
 }
 
 .logos {margin-left: 8px; overflow: hidden;margin: 0 0 13px 8px;}
-.logos .logo {display: inline-block;margin: 0 41px 35px 0;}
+.logos .logo {display: inline-block;margin: 0 41px 35px 0;position: relative;z-index: 100;}
 
 .news {width: 460px;position: relative;min-height: 470px;}
 .news h1 {font-size: 36px;margin: 34px 0 2px;}

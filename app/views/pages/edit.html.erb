@@ -2,7 +2,7 @@
 
 <%= render partial: 'admin/left_menu' %>
 <div class="container798">
-  <%= link_to 'Удалить страницу', page_path(@page.id), :method => :delete %>
+  <%= link_to 'Удалить страницу', page_path(@page.id), :method => :delete, :class=>"btn delpage" %>
 
   <div class="breadcrumbs"><%= link_to 'Статичные страницы', list_pages_path %></div>
 

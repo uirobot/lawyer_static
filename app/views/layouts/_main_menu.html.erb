@@ -16,9 +16,21 @@
                 <% end %>
             </ul>            
         </li>
-
-
-        <li><a href="#">Оценка</a></li>
-        <li><a href="#">О компании</a></li>
+        <li class="parent">
+            <%= link_to Page.find_by_id(30).name, root_path  %>
+            <ul class="submenu">
+                <% Page.find_by_id(30).children.each do |page_item| %>
+                    <li><%= link_to page_item.name, page_item.permalink  %></li>
+                <% end %>
+            </ul>            
+        </li>
+        <li class="parent">
+            <%= link_to Page.find_by_id(23).name, root_path  %>
+            <ul class="submenu">
+                <% Page.find_by_id(23).children.each do |page_item| %>
+                    <li><%= link_to page_item.name, page_item.permalink  %></li>
+                <% end %>
+            </ul>            
+        </li>
     </ul>
 </nav>
