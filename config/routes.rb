@@ -5,12 +5,14 @@ Rails.application.routes.draw do
   # get 'admin/index'
   # end
   devise_for :users
+  get 'news_item/:id' => 'news_items#show', as: 'news_item_show'
+  get 'news_items' => 'news_items#index', as: 'news_items'
   resources :news_items, path: 'admin/news_items', only: [:create, :edit, :destroy, :update, :new] do
     collection do
       get 'index_page', as: 'list'
     end
   end
-  resources :news_items, only: [:show, :index]
+  # resources :news_items, only: [:show, :index]
   resources :images, path: 'admin/images', only: [:create, :edit, :destroy, :update, :new, :index]
   root to: 'pages#index'
   resources :admin, only: [:index]
