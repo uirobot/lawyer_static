@@ -4,7 +4,7 @@
             <%= link_to @licence.name, root_path  %>
             <ul class="submenu">
                 <% @licence.children.each do |page_item| %>
-                    <li><%= link_to page_item.name, page_item.permalink  %></li>
+                    <li><%= link_to page_item.name, pages_full_path(page_item.parent.permalink, page_item.permalink)  %></li>
                 <% end %>
             </ul>
         </li>
@@ -12,7 +12,7 @@
             <%= link_to @layer_service.name, root_path  %>
             <ul class="submenu">
                 <% @layer_service.children.each do |page_item| %>
-                    <li><%= link_to page_item.name, page_item.permalink  %></li>
+                    <li><%= link_to page_item.name, pages_full_path(page_item.parent.permalink, page_item.permalink)  %></li>
                 <% end %>
             </ul>            
         </li>
@@ -20,7 +20,7 @@
             <%= link_to @other_service.name, root_path  %>
             <ul class="submenu">
                 <% @other_service.children.each do |page_item| %>
-                    <li><%= link_to page_item.name, page_item.permalink  %></li>
+                    <li><%= link_to page_item.name, pages_full_path(page_item.parent.permalink, page_item.permalink)  %></li>
                 <% end %>
             </ul>            
         </li>
@@ -28,7 +28,7 @@
             <%= link_to @about.name, root_path  %>
             <ul class="submenu">
                 <% @about.children.each do |page_item| %>
-                    <li><%= link_to page_item.name, page_item.permalink  %></li>
+                    <li><%= link_to page_item.name, pages_full_path(page_item.parent.permalink, page_item.permalink)  %></li>
                 <% end %>
             </ul>            
         </li>

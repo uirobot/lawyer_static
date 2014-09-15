@@ -23,7 +23,7 @@ Rails.application.routes.draw do
     end
   end
   resources :pages, path: '', only: [:show]
-  get ':parent_id/:id' => 'pages#show'
+  get ':parent_id/:id' => 'pages#show', :as => 'pages_full'
 
   # get 'admin/index' => 'pages#admin_index'
 
