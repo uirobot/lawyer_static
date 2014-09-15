@@ -159,7 +159,7 @@
                <%= link_to 'Архив новостей', news_items_path, :class => 'archlink' %>
 
                 <% @news_items.each do |news_item| %>
-                    <%= link_to news_item_path(news_item.id), :class => 'item' do %>
+                    <%= link_to news_item_show_path(news_item.id), :class => 'item' do %>
                         <div class="date"><%= news_item.created_at.to_formatted_s(:short) %></div>
                         <div class="intro"><%= news_item.title %></div>
                     <% end %>
