@@ -158,7 +158,7 @@ header .logo {
 header .mainav {position: relative;top: 56px;left: 49px;max-width: 970px;}
 header .mainav ul {list-style-type: none;margin: 0;}
 header .mainav ul li {display: inline-block;margin-right: 50px;padding: 0 0 18px;}
-header .mainav ul li.parent {margin-right: 26px;}
+header .mainav ul li.parent {margin-right: 26px;position: relative;}
 header .mainav ul li:last-child {margin-right: 0;}
 header .mainav ul li a {text-decoration: none;display: block;font-size: 19px;color: #16203e;}
 header .mainav ul li.parent a {padding-right: 25px;background: url(<%= asset_path('dda.png') %>) right 8px no-repeat;}
@@ -171,13 +171,14 @@ header .mainav ul li.parent .submenu {
     background: #fff;
     z-index: 99999;
     top: 42px;
+    left: -240px;
 }
 header .mainav ul li.parent .submenu:before {
     position: absolute;
     width: 27px;
     height: 13px;
     top: -13px;
-    left: 83px;
+    left: 310px;
     content: '';
     background: url(<%= asset_path('sma.png') %>) 0 0 no-repeat;
 }
