@@ -21,13 +21,13 @@ class NewsItemsController < ApplicationController
   end
 
   def index_page
-    @news_items = NewsItem.all
+    @news_items = NewsItem.page(params[:page]).per_page(10)
   end
 
   def index
     @no_sidebar = true
     @news_container = 'newspage'
-    @news_items = NewsItem.all.page(params[:page]).per_page(10)
+    @news_items = NewsItem.page(params[:page]).per_page(10)
   end
 
   def new
@@ -52,7 +52,7 @@ class NewsItemsController < ApplicationController
 
   private
 
-  def news_item_params
-    params.require(:news_item).permit(:title, :body)
-  end
+    def news_item_params
+      params.require(:news_item).permit(:title, :body)
+    end
 end

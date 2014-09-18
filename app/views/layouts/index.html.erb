@@ -137,17 +137,23 @@
                 <h2>Задайте вопрос юристу</h2>
                 <h5>Бесплатно и конфиденциально</h5>
 
-                <form action="">
-                    <input type="text" class="cut" placeholder="Ваше имя">
-                    <input type="text" class="cut" class="" placeholder="+7 ( ) - -">
-                    <input type="text" placeholder="Email">
-                    <select name="" id=""><option value="">Выберите категорию вопроса</option></select>
-                    <textarea placeholder="Ваш вопрос..."></textarea>
-                    <input type="submit" class="btn" value="Отправить запрос">
 
-                </form>
+
+              <%= form_tag messages_path, :remote => true do %>
+                  <%= text_field_tag :name, '', class: 'cut', :placeholder => 'Ваше имя' %>
+                  <%= text_field_tag :phone, '', class: 'cut', :placeholder => '+7 ( ) - -' %>
+                  <%= text_field_tag :email, '', :placeholder => 'Email' %>
+                  <%= select_tag :category, options_for_select(['Выберите категорию вопроса']), include_blank: false %>
+                  <%= text_area_tag :question, '', :placeholder => 'Ваш вопрос...' %>
+                  <%= submit_tag 'Отправить запрос', :class => 'btn' %>
+              <% end %>
                 
             </div>
+
+          <div class="fbform sent" style="display: none">
+            <h2>Ваш вопрос отправлен</h2>
+            <h5>Спасибо за обращение, мы свяжемся<br> с вами в ближайшее время.</h5>
+          </div>
 
             <div class="news">
                 

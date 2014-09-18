@@ -1,0 +1,17 @@
+<h1>Редактирование изображения</h1>
+
+<%= render partial: 'admin/left_menu' %>
+<div class="container798">
+
+  <div class="breadcrumbs"><%= link_to 'Отзывы пользователей', messages_path %></div>
+
+  <h1>Вопрос пользователя</h1>
+
+  <p><span class="field_name">Имя:</span> <%= @message.name %></p>
+  <p><span class="field_name">Телефон:</span> <%= @message.phone %></p>
+  <p><span class="field_name">Email:</span> <%= @message.email %></p>
+  <p><span class="field_name">Категория вопроса:</span> <%= @message.category %></p>
+  <p><span class="field_name">Вопрос:</span> <%= @message.question %></p>
+
+
+</div>

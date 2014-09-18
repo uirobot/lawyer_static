@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
 
 
+  get 'messages/create'
+
+  get 'messages/show'
+
+  get 'messages/index'
+
+  get 'messages/delete'
+
   # namespace :concerns do
   # get 'admin/index'
   # end
@@ -13,7 +21,7 @@ Rails.application.routes.draw do
     end
   end
   get 'news_items' => 'news_items#index', as: 'news_items_list'
-  # resources :news_items, only: [:show, :index]
+  resources :messages, path: 'admin/messages', except: [:new, :edit, :update]
   resources :images, path: 'admin/images', only: [:create, :edit, :destroy, :update, :new, :index]
   root to: 'pages#index'
   resources :admin, only: [:index]
@@ -24,6 +32,7 @@ Rails.application.routes.draw do
   end
   resources :pages, path: '', only: [:show]
   get ':parent_id/:id' => 'pages#show', :as => 'pages_full'
+
 
   # get 'admin/index' => 'pages#admin_index'
 

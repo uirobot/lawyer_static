@@ -23,12 +23,12 @@ class PagesController < ApplicationController
   end
 
   def index_page
-    @pages = Page.all
+    @pages = Page.page(params[:page]).per_page(10)
   end
 
   def index
     @pages = Page.all
-    @news_items = NewsItem.all
+    @news_items = NewsItem.limit(5)
     render layout: 'index'
   end
 

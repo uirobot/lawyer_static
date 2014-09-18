@@ -3,7 +3,7 @@
     <li><%= link_to 'Список новостей', list_news_items_path %>
     <li><%= link_to 'Статичные страницы', list_pages_path %>
     <li><%= link_to 'Изображения', images_path %>
-    <li><a href="">Отзывы посетителей</a>
+    <li><%= link_to 'Отзывы посетителей', messages_path %>
     <hr>
     <li><%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
   </ul>

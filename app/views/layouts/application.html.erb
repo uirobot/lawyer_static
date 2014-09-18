@@ -44,14 +44,17 @@
 
         <header>
             <div class="container">
-                <address>
-                    <div class="phone">+7 (918) 900-07-60</div>
-                    <div class="worktime">пн-пт 9:00 - 18:30</div>
-                    <div class="address">Санкт-Петербург, ул.Марата, 57</div>
-                </address>
                 <a href="/" class="logo"></a>
-                <%= render partial: 'layouts/main_menu' %>
-                
+                <% if request.original_url.include?('admin')  %>
+                    <h1 class="admintitle">Администраторская панель</h1>
+                <% else %>
+                      <address>
+                        <div class="phone">+7 (918) 900-07-60</div>
+                        <div class="worktime">пн-пт 9:00 - 18:30</div>
+                        <div class="address">Санкт-Петербург, ул.Марата, 57</div>
+                      </address>
+                    <%= render partial: 'layouts/main_menu' %>
+                <% end %>
             </div>
         </header>
 
@@ -85,17 +88,21 @@
                 <h2>Задайте вопрос юристу</h2>
                 <h5>Бесплатно и конфиденциально</h5>
 
-                <form action="">
-                    <input type="text" class="cut" placeholder="Ваше имя">
-                    <input type="text" class="cut" class="" placeholder="+7 ( ) - -">
-                    <input type="text" placeholder="Email">
-                    <select name="" id=""><option value="">Выберите категорию вопроса</option></select>
-                    <textarea placeholder="Ваш вопрос..."></textarea>
-                    <input type="submit" class="btn" value="Отправить запрос">
-
-                </form>
+              <%= form_tag messages_path, :remote => true do %>
+                  <%= text_field_tag :name, '', class: 'cut', :placeholder => 'Ваше имя' %>
+                  <%= text_field_tag :phone, '', class: 'cut', :placeholder => '+7 ( ) - -' %>
+                  <%= text_field_tag :email, '', :placeholder => 'Email' %>
+                  <%= select_tag :category, options_for_select(['Выберите категорию вопроса']), include_blank: false %>
+                  <%= text_area_tag :question, '', :placeholder => 'Ваш вопрос...' %>
+                  <%= submit_tag 'Отправить запрос', :class => 'btn' %>
+              <% end %>
                 
             </div>
+
+          <div class="fbform sent" style="display: none">
+            <h2>Ваш вопрос отправлен</h2>
+            <h5>Спасибо за обращение, мы свяжемся<br> с вами в ближайшее время.</h5>
+          </div>
 
         </div>
         <div id="overlay"></div>

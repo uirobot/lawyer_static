@@ -1,0 +1,23 @@
+<%= render partial: 'admin/left_menu' %>
+<div class="container798">
+
+  <h1>Сообщения пользователей</h1>
+
+  <table>
+    <thead>
+    <tr>
+      <th width="349">Имя</th>
+
+      <th style="text-align:center">удалить</th>
+    </tr>
+    </thead>
+    <% @messages.each do |message| %>
+        <tr>
+          <td><%= link_to message.name, message_path(message.id) %></td>
+          <td align="center"><%= link_to 'X', messages_path(message.id), :method => :delete %></td>
+        </tr>
+    <% end %>
+
+  </table>
+</div>
+<%= will_paginate @news_items, :class => 'pagination', :previous_label => 'Назад', :next_label => 'Вперёд' %>
