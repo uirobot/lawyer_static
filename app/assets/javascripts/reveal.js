@@ -1,6 +1,9 @@
 $(document).ready(function() { // вся магия после загрузки страницы
-    $('a#go').click( function(event){ // ловим клик по ссылки с id="go"
-        event.preventDefault(); // выключаем стандартную роль элемента
+    console.log('1')
+
+    $('#go').click( function(event){ // ловим клик по ссылки с id="go"
+        console.log('click');
+        //event.preventDefault(); // выключаем стандартную роль элемента
         $('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
             function(){ // после выполнения предъидущей анимации
                 $('#modal_form') 
@@ -8,7 +11,7 @@ $(document).ready(function() { // вся магия после загрузки 
                     .animate({opacity: 1, top: '50%'}, 200); // плавно прибавляем прозрачность одновременно со съезжанием вниз
         });
         return false;
-    });
+    }).css('opacity', 0.5);
     /* Закрытие модального окна, тут делаем то же самое но в обратном порядке */
     $('#modal_close, #overlay').click( function(){ // ловим клик по крестику или подложке
         $('#modal_form')

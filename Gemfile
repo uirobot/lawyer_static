@@ -51,4 +51,4 @@ gem 'will_paginate'
 
 gem 'devise'
 
-
+gem 'jquery-turbolinks'

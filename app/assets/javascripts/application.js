@@ -11,9 +11,11 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require reveal
 //= require jquery_ujs
 
-//= require turbolinks
 //= require main
 //= require responsiveslides.min
+
+//= require turbolinks
