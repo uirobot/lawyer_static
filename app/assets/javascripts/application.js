@@ -16,6 +16,6 @@
 //= require jquery_ujs
 
 //= require main
-//= require responsiveslides.min
+//= require responsiveslides
 
 //= require turbolinks

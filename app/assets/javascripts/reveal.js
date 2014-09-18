@@ -1,8 +1,5 @@
 $(document).ready(function() { // вся магия после загрузки страницы
-    console.log('1')
-
     $('#go').click( function(event){ // ловим клик по ссылки с id="go"
-        console.log('click');
         //event.preventDefault(); // выключаем стандартную роль элемента
         $('#overlay').fadeIn(400, // сначала плавно показываем темную подложку
             function(){ // после выполнения предъидущей анимации

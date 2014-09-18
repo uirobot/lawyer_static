@@ -44,7 +44,7 @@
 
         <header>
             <div class="container">
-                <a href="/" class="logo"></a>
+              <%= link_to '', root_path, :class => 'logo' %>
                 <% if request.original_url.include?('admin')  %>
                     <h1 class="admintitle">Администраторская панель</h1>
                 <% else %>

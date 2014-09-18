@@ -56,7 +56,7 @@
 
         // Namespacing
         namespace = settings.namespace,
-        namespaceIdx = namespace + i,
+        namespaceIdx = namespace + 1,
 
         // Classes
         navClass = namespace + "_nav " + namespaceIdx + "_nav",
