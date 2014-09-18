@@ -1,7 +1,7 @@
 <nav class="mainav">
     <ul>
         <li class="parent">
-            <%= link_to @licence.name, root_path  %>
+            <%= link_to @licence.name, pages_full_path(@licence.permalink, @licence.children.first ? @licence.children.first.permalink : @licence.permalink)  %>
             <ul class="submenu">
                 <% @licence.children.each do |page_item| %>
                     <li><%= link_to page_item.name, pages_full_path(page_item.parent.permalink, page_item.permalink)  %></li>
@@ -9,7 +9,7 @@
             </ul>
         </li>
         <li class="parent">
-            <%= link_to @layer_service.name, root_path  %>
+            <%= link_to @layer_service.name, pages_full_path(@layer_service.permalink, @layer_service.children.first ? @layer_service.children.first.permalink : @layer_service.permalink)  %>
             <ul class="submenu">
                 <% @layer_service.children.each do |page_item| %>
                     <li><%= link_to page_item.name, pages_full_path(page_item.parent.permalink, page_item.permalink)  %></li>
@@ -17,7 +17,7 @@
             </ul>            
         </li>
         <li class="parent">
-            <%= link_to @other_service.name, root_path  %>
+            <%= link_to @other_service.name, pages_full_path(@other_service.permalink, @other_service.children.first ? @other_service.children.first.permalink : @other_service.permalink)  %>
             <ul class="submenu">
                 <% @other_service.children.each do |page_item| %>
                     <li><%= link_to page_item.name, pages_full_path(page_item.parent.permalink, page_item.permalink)  %></li>
@@ -25,7 +25,7 @@
             </ul>            
         </li>
         <li class="parent">
-            <%= link_to @about.name, root_path  %>
+            <%= link_to @about.name, pages_full_path(@about.permalink, @about.children.first ? @about.children.first.permalink : @about.permalink)  %>
             <ul class="submenu">
                 <% @about.children.each do |page_item| %>
                     <li><%= link_to page_item.name, pages_full_path(page_item.parent.permalink, page_item.permalink)  %></li>
