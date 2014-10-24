@@ -11,6 +11,10 @@
     <%= form.text_area :content, class: 'form-control', :placeholder => 'Содержимое страницы' %>
 
     <%= form.text_field :place, class: 'form-control', :placeholder => 'Порядковый номер, больше - выше по порядку' %>
+
+    <%= form.text_field :title, class: 'form-control', :placeholder => 'Заголовок' %>
+
+    <%= form.text_area :meta_description, class: 'form-control', :placeholder => 'Мета-описание' %>
   
   <%= form.submit 'Опубликовать', :class => 'btn' %>
 <% end %>

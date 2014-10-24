@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Личный юрист" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : 'Личный юрист' %></title>
     <%= csrf_meta_tags %>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -45,7 +45,7 @@
         <header>
             <div class="container">
                 <address>
-                    <div class="phone">+7 (918) 900-07-60</div>
+                    <div class="phone">+7 (812) 900-07-60</div>
                     <div class="worktime">пн-пт 9:00 - 18:30</div>
                     <div class="address">Санкт-Петербург, ул.Марата, 57</div>
                 </address>
@@ -57,30 +57,30 @@
         </header>
 
         <ul class="rslides" id="slider">
-            <li>
-              <%= image_tag('slider/slide01.png') %>
-              <div class="caption">
-                <h1>Правовое сопровождение<br>вашего бизнеса</h1>
-                <p>Надежная команда профессиональных юристов и адвокатов всегда в вашем распоряжении. Мы решаем любые вопросы в срок и в строгой конфиденциальности.</p>
-                <a href="/intellectualproperty" class="btn flr">Услуги для бизнеса</a>
-              </div>
-            </li>
-            <li>
-              <%= image_tag('slider/slide02.png') %>
-              <div class="caption">
-                <h1>Лицензирование деятельности<br>и сертификация товаров</h1>
-                <p>Получение лицензии на осуществление лицензируемой деятельности — это требование законодательства, поэтому вопрос «зачем нужно лицензирование» здесь не стоит.</p>
-                <a href="/alco" class="btn flr">Лицензирование и сертификация</a>
-              </div>
-            </li>
-            <li>
-              <%= image_tag('slider/slide03.jpg') %>
-              <div class="caption">
-                <h1>Сопровождение<br>сделок с недвижимостью</h1>
-                <p>Хотите быть уверены, что ваша сделка с недвижимостью<br>в полном порядке? Мы поможем подготовить и оформить<br>все необходимые документы.</p>
-                <a href="/registrationandrealestatetransactions" class="btn flr">Услуги для бизнеса</a>
-              </div>
-            </li>
+          <li>
+            <%= image_tag('slider/slide02.png') %>
+            <div class="caption">
+              <h1>Лицензирование деятельности<br>и сертификация товаров</h1>
+              <p>Получение лицензии на осуществление лицензируемой деятельности — это требование законодательства, поэтому вопрос «зачем нужно лицензирование» здесь не стоит.</p>
+              <a href="/alco" class="btn flr">Лицензирование и сертификация</a>
+            </div>
+          </li>
+          <li>
+            <%= image_tag('slider/slide03.jpg') %>
+            <div class="caption">
+              <h1>Сопровождение<br>сделок с недвижимостью</h1>
+              <p>Хотите быть уверены, что ваша сделка с недвижимостью<br>в полном порядке? Мы поможем подготовить и оформить<br>все необходимые документы.</p>
+              <a href="/registrationandrealestatetransactions" class="btn flr">Услуги для бизнеса</a>
+            </div>
+          </li>
+          <li>
+            <%= image_tag('slider/slide01.png') %>
+            <div class="caption">
+              <h1>Правовое сопровождение<br>вашего бизнеса</h1>
+              <p>Надежная команда профессиональных юристов и адвокатов всегда в вашем распоряжении. Мы решаем любые вопросы в срок и в строгой конфиденциальности.</p>
+              <a href="/intellectualproperty" class="btn flr">Услуги для бизнеса</a>
+            </div>
+          </li>
         </ul>
 
        <p class="notice" style="margin:0;"><%= notice %></p>
@@ -98,10 +98,10 @@
                             <a href="/alco" class="button"><span>Лицензирование<br> деятельности<br>и сертификация товаров</span></a>
                         </div>
                         <div class="item">
-                            <a href="/intellectualproperty" class="button"><span>Регистрация объектов<br> интеллектуальной<br> собственности</span></a>
+                            <a href="/layer_services/entryintosro" class="button"><span>Вступление в СРО</span></a>
                         </div>
                         <div class="item">
-                            <a href="/intellectualproperty" class="button"><span>Правовая защита объектов<br> интеллектуальной<br> собственности</span></a>
+                            <a href="/otherservices/transportationservices" class="button"><span>Транспортные услуги</span></a>
                         </div>
                         <div class="item">
                             <a href="/сonsultingandсustomerservice" class="button"><span>Правовой консалтинг</span></a>
@@ -115,16 +115,22 @@
                         <div class="item">
                             <a href="/lawyer" class="button"><span>Защита в правоохранительных<br> органах</span></a>
                         </div>
+                      <div class="item">
+                        <a href="/otherservices/price" class="button"><span>Оценка</span></a>
+                      </div>
+                      <div class="item">
+                        <a href="/layer_services/accountant-service" class="button"><span>Бухгалтерские<br> услуги</span></a>
+                      </div>
                     </div>
 
                 </div>
                 <div class="partners">
                     <h2>Мы работаем со многими компаниями и предпринимателями, в том числе и с теми, кто занимает прочное место в экономике России.</h2>
                     <div class="logos">
-                      <%= image_tag('partners/01.png', :class => 'logo') %>
-                      <%= image_tag('partners/02.png', :class => 'logo') %>
-                      <%= image_tag('partners/03.png', :class => 'logo') %>
-                      <%= image_tag('partners/04.png', :class => 'logo') %>
+                      <%= image_tag('partners/5.jpg', :class => 'logo') %>
+                      <%= image_tag('partners/6.jpg', :class => 'logo') %>
+                      <%= image_tag('partners/7.jpg', :class => 'logo') %>
+                      <%= image_tag('partners/8.jpg', :class => 'logo') %>
                     </div>
                     <a href="#" class="btn flr">Рекомендации клиентов</a>                    
                 </div>
@@ -144,7 +150,7 @@
                   <%= text_field_tag :name, '', class: 'cut', :placeholder => 'Ваше имя' %>
                   <%= text_field_tag :phone, '', class: 'cut', :placeholder => '+7 ( ) - -' %>
                   <%= text_field_tag :email, '', :placeholder => 'Email' %>
-                  <%= select_tag :category, options_for_select(['Выберите категорию вопроса']), include_blank: false %>
+                  <%= select_tag :category, options_for_select(['Выберите категорию вопроса','Лицензирование: алкоголь','Лицензирование: медицина','Лицензирование: фармацевтика','Регистрация недвижимости','Согласования']), include_blank: false %>
                   <%= text_area_tag :question, '', :placeholder => 'Ваш вопрос...' %>
                   <%= submit_tag 'Отправить запрос', :class => 'btn' %>
               <% end %>
@@ -174,12 +180,15 @@
 
         <footer>
             <div class="container940">
-                <a href="" class="btn">Как добраться?</a>
+                <!--<a href="" class="btn">Как добраться?</a>-->
                 <address>
                     <div class="address">Санкт-Петербург <span>ул.Марата, 57</span></div>
 
                     <div class="phone"> <div class="ico"></div> +7 (918) 900-07-60</div>
                     <div class="worktime">понедельник-пятница 9:00 - 18:30</div>
+                </address>
+                <address>
+                    <div class="address">Москва <span>Ленинский пр., д.1/2, корп.1</span></div>
                 </address>
                 <p class="cprt">© 2010—2014, Юридическая компания «Личный Юрист»</p>
             </div>

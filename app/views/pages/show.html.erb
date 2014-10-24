@@ -1,4 +1,5 @@
-
+<% content_for :title, @page.title %>
+<% content_for :meta_description, @page.meta_description %>
 <%= render partial: 'pages/page_partials/left_menu', locals: {neighbors: @page.siblings, current_page: @page } %>
 <div class="container798">
   <%= render partial: 'pages/page_partials/bread', locals: {p_id: @page } %>
