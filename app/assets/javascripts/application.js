@@ -15,7 +15,9 @@
 //= require reveal
 //= require jquery_ujs
 
-//= require main
 //= require responsiveslides
+//= require jquery.event.swipe
+//= require jquery.event.move
+//= require main
 
 //= require turbolinks
