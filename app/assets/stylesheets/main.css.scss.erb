@@ -157,14 +157,6 @@ header .logo {
     background: url(<%= asset_path('logo.png') %>) 0 0 no-repeat;
     background-size: 188px 75px;
 }
-@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
-only screen and (-moz-min-device-pixel-ratio: 1.5),
-only screen and (-o-min-device-pixel-ratio: 3/2),
-only screen and (min-device-pixel-ratio: 1.5) {
-  header .logo {
-    background: url(<%= asset_path('logo@2x.png') %>) 0 0 no-repeat;
-  }
-}
 header .mainav {position: relative;top: 56px;left: 49px;max-width: 970px;}
 header .mainav ul {list-style-type: none;margin: 0;}
 header .mainav ul li {display: inline-block;margin-right: 50px;padding: 0 0 18px;}
@@ -288,6 +280,7 @@ header address .address {opacity: 0.9;font-size: 15px;}
     padding-left: 19px;
     color: #6b92bf;
 }
+.news .archlink:hover {color: #6083ab;}
 
 .news .item {
     position: relative;
@@ -295,8 +288,9 @@ header address .address {opacity: 0.9;font-size: 15px;}
     margin: 0 -20px;
     text-decoration: none;
     display: block;
+    cursor: pointer;
 }
-.news .item:hover {background: #fff;}
+.news .item:hover {background: #fff;cursor: pointer;}
 .news .item .date {
     font-size: 13px;
     color: #b3b3a9;
@@ -565,8 +559,10 @@ footer address .worktime {
     font-size: 15px;
     opacity: 0.6;
 }
-footer .btn {position: absolute;left: 279px;top: 5px;}
-footer .qstn_lnk {
+footer .btn.map {position: absolute;left: 279px;top: 5px;}
+footer .btn.qstn_lnk {position: absolute;right: 0;bottom: -10px;opacity: 1 !important;}
+
+/*footer .qstn_lnk {
     position: absolute;
     right: 0;
     bottom: -24px;
@@ -578,7 +574,7 @@ footer .qstn_lnk {
     text-align: center;
     text-decoration: none;
 }
-footer .qstn_lnk span {display: block;font-size: 13px;margin-top: -6px;}
+footer .qstn_lnk span {display: block;font-size: 13px;margin-top: -6px;}*/
 footer .cprt {font-size: 13px;opacity: 0.6;width: 400px;}
 
 
