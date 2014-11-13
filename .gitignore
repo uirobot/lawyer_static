@@ -14,6 +14,8 @@ pickle-email-*.html
 config/initializers/secret_token.rb
 config/secrets.yml
 config/database.yml
+.DS_Store
+
 
 ## Environment normalisation:
 /.bundle
@@ -29,4 +31,3 @@ Gemfile.lock
 # unless supporting rvm < 1.11.0 or doing something fancy, ignore this:
 .rvmrc
 *.log
-.DS_Store
