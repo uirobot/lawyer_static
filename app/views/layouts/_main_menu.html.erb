@@ -1,7 +1,7 @@
 <nav class="mainav">
     <ul>
         <li class="parent">
-            <%= link_to @licence.name, pages_full_path(@licence.permalink, @licence.children.first ? @licence.children.first.permalink : @licence.permalink)  %>
+            <%= link_to @licence.name, pages_full_path(@licence.permalink, @licence.permalink)  %>
             <ul class="submenu">
                 <% @licence.children.each do |page_item| %>
                     <li><%= link_to page_item.name, pages_full_path(page_item.parent.permalink, page_item.permalink)  %></li>
