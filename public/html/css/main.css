@@ -181,8 +181,8 @@ header address .phone:before {
     background: url(../img/phone_ico.png) 0 0 no-repeat;
     background-size: 100%;
 }
-header address .worktime {font-size: 15px;opacity: 0.6;margin: -5px 0 5px;}
-header address .address {opacity: 0.9;font-size: 15px;}
+header address .worktime {font-size: 15px;opacity: 0.6;margin: -5px 0 0;}
+/*header address .address {opacity: 0.9;font-size: 12px;}*/
 
 .services {
     float: left;
