@@ -4,7 +4,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=0.1, maximum-scale=1.0">
+    <meta name="viewport" content="width=640, user-scalable=no">
     <title><%= content_for?(:title) ? yield(:title) : 'Личный юрист' %></title>
     <meta name="description" content="<%= content_for?(:meta_description) ? yield(:meta_description) : 'Личный юрист' %>">
     <%= csrf_meta_tags %>
@@ -94,7 +94,7 @@
                   <%= text_area_tag :question, '', :placeholder => 'Ваш вопрос...' %>
                   <%= submit_tag 'Отправить запрос', :class => 'btn' %>
               <% end %>
-                
+
             </div>
 
           <div class="fbform sent" style="display: none">

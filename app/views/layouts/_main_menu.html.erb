@@ -30,7 +30,61 @@
                 <% @about.children.each do |page_item| %>
                     <li><%= link_to page_item.name, pages_full_path(page_item.parent.permalink, page_item.permalink)  %></li>
                 <% end %>
-            </ul>            
+            </ul>
         </li>
     </ul>
 </nav>
+
+
+
+
+
+
+<div id="menuzord" class="menuzord red">
+    <ul class="menuzord-menu menuzord-left menuzord-indented scrollable">
+        <li>
+            <%= link_to @licence.name, pages_full_path(@licence.permalink, @licence.children.first ? @licence.children.first.permalink : @licence.permalink)  %>
+            <ul class="dropdown">
+                <% @licence.children.each do |page_item| %>
+                    <li><%= link_to page_item.name, pages_full_path(page_item.parent.permalink, page_item.permalink)  %></li>
+                <% end %>
+            </ul>
+        </li>
+        <li>
+            <%= link_to @layer_service.name, pages_full_path(@layer_service.permalink, @layer_service.children.first ? @layer_service.children.first.permalink : @layer_service.permalink)  %>
+            <ul class="dropdown">
+                <% @layer_service.children.each do |page_item| %>
+                    <li><%= link_to page_item.name, pages_full_path(page_item.parent.permalink, page_item.permalink)  %></li>
+                <% end %>
+            </ul>
+        </li>
+        <li>
+            <%= link_to @other_service.name, pages_full_path(@other_service.permalink, @other_service.children.first ? @other_service.children.first.permalink : @other_service.permalink)  %>
+            <ul class="dropdown">
+                <% @other_service.children.each do |page_item| %>
+                    <li><%= link_to page_item.name, pages_full_path(page_item.parent.permalink, page_item.permalink)  %></li>
+                <% end %>
+            </ul>
+        </li>
+        <li>
+            <%= link_to @about.name, pages_full_path(@about.permalink, @about.children.first ? @about.children.first.permalink : @about.permalink)  %>
+            <ul class="dropdown">
+                <% @about.children.each do |page_item| %>
+                    <li><%= link_to page_item.name, pages_full_path(page_item.parent.permalink, page_item.permalink)  %></li>
+                <% end %>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+<script type="text/javascript">
+ $(function(){
+    $("#menuzord").menuzord({
+      trigger: 'click',
+      indicatorFirstLevel: "+",
+      indicatorSecondLevel: "+"
+    });
+  });
+</script>
+
