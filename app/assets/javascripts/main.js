@@ -96,7 +96,7 @@ License: http://codecanyon.net/licenses
 
     // responsive behavior
     if(settings.responsive){
-      $(menu_container).addClass("menuzord-responsive").prepend("<a href='javascript:void(0)' class='showhide'><em></em><em></em><em></em></a>");
+      $(menu_container).addClass("menuzord-responsive")//.prepend("<a href='javascript:void(0)' class='showhide'><em></em><em></em><em></em></a>");
       showHideButton = $(menu_container).children(".showhide");
     }
 

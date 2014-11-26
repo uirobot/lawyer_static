@@ -41,6 +41,7 @@
 
 
 <div id="menuzord" class="menuzord red">
+    <a href='javascript:void(0)' class='showhide'><em></em><em></em><em></em></a>
     <ul class="menuzord-menu menuzord-left menuzord-indented scrollable">
         <li>
             <%= link_to @licence.name, pages_full_path(@licence.permalink, @licence.children.first ? @licence.children.first.permalink : @licence.permalink)  %>
