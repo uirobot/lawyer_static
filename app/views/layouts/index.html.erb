@@ -52,36 +52,39 @@
 
                 <%= link_to '', root_path, :class => 'logo' %>
                 <%= render partial: 'layouts/main_menu' %>
-                
+
             </div>
         </header>
 
-        <ul class="rslides" id="slider">
-          <li>
+
+        <div id="mainslider" class="owl-carousel">
+
+          <div class="item">
             <%= image_tag('slider/slide02.png') %>
             <div class="caption">
               <h1>Лицензирование деятельности<br>и сертификация товаров</h1>
               <p>Получение лицензии на осуществление лицензируемой деятельности — это требование законодательства, поэтому вопрос «зачем нужно лицензирование» здесь не стоит.</p>
               <a href="/alco" class="btn flr">Лицензирование и сертификация</a>
             </div>
-          </li>
-          <li>
+          </div>
+          <div class="item">
             <%= image_tag('slider/slide03.jpg') %>
             <div class="caption">
               <h1>Сопровождение<br>сделок с недвижимостью</h1>
               <p>Хотите быть уверены, что ваша сделка с недвижимостью<br>в полном порядке? Мы поможем подготовить и оформить<br>все необходимые документы.</p>
               <a href="/registrationandrealestatetransactions" class="btn flr">Услуги для бизнеса</a>
             </div>
-          </li>
-          <li>
+          </div>
+          <div class="item">
             <%= image_tag('slider/slide01.png') %>
             <div class="caption">
               <h1>Правовое сопровождение<br>вашего бизнеса</h1>
               <p>Надежная команда профессиональных юристов и адвокатов всегда в вашем распоряжении. Мы решаем любые вопросы в срок и в строгой конфиденциальности.</p>
               <a href="/intellectualproperty" class="btn flr">Услуги для бизнеса</a>
             </div>
-          </li>
-        </ul>
+          </div>
+
+        </div>
 
        <p class="notice" style="margin:0;"><%= notice %></p>
        <p class="alert" style="margin:0;"><%= alert %></p>
@@ -132,7 +135,7 @@
                       <%= image_tag('partners/7.jpg', :class => 'logo') %>
                       <%= image_tag('partners/8.jpg', :class => 'logo') %>
                     </div>
-                    <a href="#" class="btn flr">Рекомендации клиентов</a>                    
+                    <a href="#" class="btn flr">Рекомендации клиентов</a>
                 </div>
                 <div class="clearFix"></div>
 
@@ -154,7 +157,7 @@
                   <%= text_area_tag :question, '', :placeholder => 'Ваш вопрос...' %>
                   <%= submit_tag 'Отправить запрос', :class => 'btn' %>
               <% end %>
-                
+
             </div>
 
           <div class="fbform sent" style="display: none">
@@ -163,7 +166,7 @@
           </div>
 
             <div class="news">
-                
+
                 <h1>Новости</h1>
 
                <%= link_to 'Архив новостей', news_items_list_path, :class => 'archlink' %>
@@ -191,7 +194,5 @@
                 <p class="cprt">© 2010—2014, Юридическая компания «Личный Юрист»</p>
             </div>
         </footer>
-
-    <script type="text/javascript" src="<%= asset_path('retina.min') %>"></script>
   </body>
 </html>
