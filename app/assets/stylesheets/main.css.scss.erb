@@ -550,6 +550,7 @@ footer address {
     }
 }
 footer address .phone {position: absolute;right: 0;top: 5px;font-size: 30px;font-weight: bold;text-decoration: none; color: #4A4A4A;display: block;}
+footer address .phone+.phone {top: 64px;}
 footer address .phone:before {
     position: absolute;
     content: '';
@@ -949,11 +950,6 @@ span.field_name {
     .menuzord-responsive .menuzord-menu>li.search form{width:100%;margin:4px 0;padding:10px 16px!important}
     .menuzord-responsive .menuzord-menu>li.search form input[type=text],.menuzord-responsive .menuzord-tabs-content,.menuzord-responsive .menuzord-tabs-nav{width:100%}}
 
-
-    .contentpage p {
-        font-size: 28px;
-    }
-
     .rslides {
         min-width: 640px !important;
         height: 788px !important;
@@ -998,6 +994,10 @@ span.field_name {
         .container798 {
             width:580px !important;
             margin-left: 0 !important;
+            font-size: 28px;
+            p {
+                font-size: 28px;
+            }
         }
     }
     .container940 {
@@ -1120,6 +1120,7 @@ span.field_name {
                         left: 45px !important;
                     }
             }
+            .phone+.phone {top: 520px !important;border: 0;}
             .worktime {
                 left: 123px !important;
                 top: 550px !important;

@@ -50,11 +50,11 @@
                 <% if request.original_url.include?('admin')  %>
                     <h1 class="admintitle">Администраторская панель</h1>
                 <% else %>
-                      <address>
-                        <a href="tel:+78129000760" class="phone">+7 (812) 900-07-60</a>
-                        <div class="worktime">пн-пт 9:00 - 18:30</div>
-                        <div class="address">Санкт-Петербург, ул.Марата, 57</div>
-                      </address>
+                  <address>
+                      <a href="tel:+78129000760" class="phone">8 (926) 164-3888</a>
+                      <div class="worktime">пн-пт 9:00 - 18:30</div>
+                      <div class="address">Москва, Ленинский проспект<br> д. 1/2 корп. 1</div>
+                  </address>
                     <%= render partial: 'layouts/main_menu' %>
                 <% end %>
             </div>
@@ -69,12 +69,13 @@
 
         <footer>
             <div class="container940">
-                <a href="http://maps.yandex.ru/?rtext=~59.922305,30.347345&sll=30.343308,59.922525&sspn=0.045919,0.013961&rtm=atm&source=route&ll=30.343308,59.922525&spn=0.045919,0.013961&z=15&l=map" class="btn map" target="_blank">Как добраться?</a>
+                <a href="/about/contact" class="btn map" target="_blank">Как добраться?</a>
                 <address>
-                    <div class="address">Санкт-Петербург <span>ул.Марата, 57</span></div>
                     <div class="address">Москва <span>Ленинский проспект, д. 1/2 корп. 1</span></div>
+                    <div class="address">Санкт-Петербург <span>ул.Марата, 57</span></div>
+                    <a href="tel:+78129000760" class="phone"><div class="ico"></div> +7 (926) 164-38-88</a>
                     <a href="tel:+78129000760" class="phone"><div class="ico"></div> +7 (812) 900-07-60</a>
-                    <div class="worktime">понедельник-пятница 9:00 - 18:30</div>
+                    <!-- div class="worktime">понедельник-пятница 9:00 - 18:30</div -->
                 </address>
                 <a href="#" class="btn qstn_lnk" id="go">Задать вопрос</a>
                 <p class="cprt">© 2010—2014, Юридическая компания «Личный Юрист»</p>
