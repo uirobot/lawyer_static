@@ -3,6 +3,9 @@
 <%= render partial: 'pages/page_partials/left_menu', locals: {neighbors: @page.siblings, current_page: @page } %>
 <div class="container798">
   <%= render partial: 'pages/page_partials/bread', locals: {p_id: @page } %>
+  <div class="breadcrumbs">
+    <%= get_bread_crumbs(@page) %>
+  </div>
   <div class="badge">100% гарантия результата</div>
-  <%= @page.content.html_safe() %>
+  <%= @page.content.html_safe %>
 </div>
